@@ -53,7 +53,12 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    }
+    },
+    // buildDir: 'nuxt-dist',
+    // publicPath: 'public/',
+  },
+  generate: {
+    dir: 'public'
   },
   router: {
     middleware: 'languageDetection'
