@@ -32,6 +32,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/components'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -42,6 +43,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    ['storyblok-nuxt', {accessToken: '9YjhTyuQbvEnwXQU55j8cwtt', cacheProvider: 'memory'}]
   ],
   /*
   ** Build configuration
@@ -52,5 +54,8 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  router: {
+    middleware: 'languageDetection'
+  },
 }
